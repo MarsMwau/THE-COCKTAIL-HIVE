@@ -1,42 +1,33 @@
-const searchBar = document.getElementById('search-bar');
+  const searchForm = document.querySelector('form');
+  const searchBar = document.querySelector('#search-bar');
+  const cocktailCards = document.querySelector('.cocktail-cards');
 
-searchBar.addEventListener('keyup', (event) => {
-  // If the user presses "Enter" or "Search"
-  if (event.keyCode === 13 || event.key === 'Search') {
-    const ingredient = searchBar.value.trim();
+  searchForm.addEventListener('submit', async (e) => {
+    e.preventDefault(); // prevent form from submitting
 
-    // Fetch the list of cocktails that include the ingredient
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`)
-      .then(response => response.json())
-      .then(data => {
-        // Clear the cocktail list before displaying the new list
-        const cocktailList = document.querySelector('.cocktail-list');
-        cocktailList.innerHTML = '';
+    const letter = searchBar.value.charAt(0).toLowerCase(); // get the first letter of the search query
 
-        // Create a new card for each cocktail in the list
-        data.drinks.forEach(cocktail => {
-          const card = document.createElement('div');
-          card.classList.add('card');
-          card.innerHTML = `
-            <img src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}">
-            <h2>${cocktail.strDrink}</h2>
-            <p>${cocktail.strCategory}</p>
-          `;
-          cocktailList.appendChild(card);
+    try {
+      const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`);
+      const data = await response.json();
 
-          // Add an event listener to each card that displays the details for that cocktail
-          card.addEventListener('click', () => {
-            // Fetch the details for the selected cocktail
-            fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktail.idDrink}`)
-              .then(response => response.json())
-              .then(data => {
-                // Display the details for the selected cocktail
-                // (same code as in the previous example)
-              })
-              .catch(error => console.log(error));
-          });
-        });
-      })
-      .catch(error => console.log(error));
-  }
-});
+      const drinks = data.drinks; // an array of objects representing drinks that match the search query
+
+      // Clear previous search results
+      cocktailCards.innerHTML = '';
+
+      // Create a card for each drink that matches the search query
+      drinks.forEach((drink) => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+          <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
+          <h3>${drink.strDrink}</h3>
+          <p>${drink.strInstructions}</p>
+        `;
+        cocktailCards.appendChild(card);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  });
