@@ -158,4 +158,35 @@ nav ul li:last-child {
   font-style: italic;
 }
 /* Cards Section */
+#drinks {
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 4em 2em 4em;
+}
+.cocktail-cards {
+  display: inline-flex;
 
+}
+
+.card {
+  height: 500px;
+  width: 60%;
+  margin: 10px;
+  box-shadow: 5px 5px 20px red;
+  color: white;
+  background-color: #300236;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card img {
+  height: 500px;
+  width: 350px;
+  border-radius: 3px;
+}
+
+.card-details {
+  color: #000000;
+  height: fit-content;
+  background: pink;
+}

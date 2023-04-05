@@ -1,33 +1,49 @@
-  const searchForm = document.querySelector('form');
-  const searchBar = document.querySelector('#search-bar');
-  const cocktailCards = document.querySelector('.cocktail-cards');
+const searchForm = document.querySelector('form');
+const searchBar = document.querySelector('#search-bar');
+const cocktailCards = document.querySelector('.cocktail-cards');
 
-  searchForm.addEventListener('submit', async (e) => {
-    e.preventDefault(); // prevent form from submitting
+searchForm.addEventListener('submit', async (e) => {
+  e.preventDefault(); // prevent form from submitting
 
-    const letter = searchBar.value.charAt(0).toLowerCase(); // get the first letter of the search query
+const apiKey = `1`;
+const searchQuery = searchBar.value.toLowerCase(); // get the first letter of the search query
+const endpoint = `https://www.thecocktaildb.com/api/json/v1/${apiKey}/search.php?s=${searchQuery}`;
 
-    try {
-      const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`);
-      const data = await response.json();
-
-      const drinks = data.drinks; // an array of objects representing drinks that match the search query
-
+fetch(endpoint)
+  .then(response => response.json())
+  .then(data => {
+      const cocktailDrinks = data.drinks.filter((drink) => drink.strAlcoholic === "Alcoholic"); // filter out drinks that are not classified as cocktails
+  
       // Clear previous search results
       cocktailCards.innerHTML = '';
-
+  
       // Create a card for each drink that matches the search query
-      drinks.forEach((drink) => {
+      cocktailDrinks.forEach((drink) => {
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
           <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
-          <h3>${drink.strDrink}</h3>
-          <p>${drink.strInstructions}</p>
+          <div class="card-details">
+            <h3>${drink.strDrink}</h3>
+            <h4>Ingredients:</h4>
+            <ul>
+              ${Object.entries(drink)
+                .filter(([key, value]) => key.startsWith('strIngredient') && value)
+                .map(([key, value]) => `<li>${value}</li>`)
+                .join('')
+              }
+            </ul>
+            <h4>Instructions:</h4>
+            <ul>
+              ${Object.entries(drink)
+                .filter(([key, value]) => key.startsWith('strInstructions') && value)
+                .map(([key, value]) => `<li>${value}</li>`)
+                .join('')
+              }
+            </ul>
+          </div>
         `;
         cocktailCards.appendChild(card);
       });
-    } catch (err) {
-      console.error(err);
-    }
-  });
+    })
+});
