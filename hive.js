@@ -22,11 +22,11 @@ fetch(endpoint)
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
-          <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
+          <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">strDrink
           <div class="card-details">
-            <h3>${drink.strDrink}</h3>
+            <h3>${drink.strDristrDrinknk}</h3>strDrink
             <h4>Ingredients:</h4>
-            <ul>
+            <ul>strDrinkstrDrink
               ${Object.entries(drink)
                 .filter(([key, value]) => key.startsWith('strIngredient') && value)
                 .map(([key, value]) => `<li>${value}</li>`)
@@ -35,11 +35,7 @@ fetch(endpoint)
             </ul>
             <h4>Instructions:</h4>
             <ul>
-              ${Object.entries(drink)
-                .filter(([key, value]) => key.startsWith('strInstructions') && value)
-                .map(([key, value]) => `<li>${value}</li>`)
-                .join('')
-              }
+            <li>${drink.strInstructions}</li>
             </ul>
           </div>
         `;
