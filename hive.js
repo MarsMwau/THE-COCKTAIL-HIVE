@@ -27,13 +27,13 @@ fetch(endpoint)
             <h3>${drink.strDrink}</h3>
             <div class="main-details">
             <h4>Ingredients:</h4>
-            <ul>
+            <ol>
               ${Object.entries(drink)
                 .filter(([key, value]) => key.startsWith('strIngredient') && value)
                 .map(([key, value]) => `<li>${value}</li>`)
                 .join('')
               }
-            </ul>
+            </ol>
             <h4>Instructions:</h4>
             <ul>
             <li>${drink.strInstructions}</li>

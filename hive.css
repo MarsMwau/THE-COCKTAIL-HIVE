@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=DM+Sans&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=DynaPuff:wght@700&family=Sedgwick+Ave+Display&display=swap');
+
 
 *,*::before,*::after {
   box-sizing: border-box;
@@ -112,7 +117,7 @@ nav .search-bar {
 }
 
 .hero h1 {
-  font-family: 'Cabin Sketch', cursive;
+  font-family: 'Sedgwick Ave Display', cursive;
   font-weight: 900;
   color: #BC3908;
   font-size: clamp(4rem, 5vw, 2rem);
@@ -122,27 +127,30 @@ nav .search-bar {
 
 .hero .hcard p {
   background: transparent;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 1px rgba(185, 7, 185, 0.678);
+  border-radius: 25px;
+  box-shadow: 4px 0px 57px 1px #d43013;
   max-width: 500px;
-  padding: 1.5em;
-  cursor: pointer;
+  padding: 1.5em 2em 3em 2em;
+  cursor: context-menu;
   margin: auto;
   margin: 10px 30px 70px 110px;
-  color: rgb(235, 159, 203);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fff;
+  font-family: 'Caveat';
+  font-size: 17px;
 }
 
 .hero .hcard p:hover {
-  box-shadow: 0px 0px 5px 1px rgba(255, 166, 255, 0.678);
-  color: rgb(240, 134, 178);
+  box-shadow: 5px 0px 57px 1px #ECA400;
+  color: #d43013;
 }
 
 .hero h3 {
-  color: pink;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-style: italic;
+  color: rgb(235, 201, 12);
+  font-family: 'Dancing Script';
+  font-style: oblique;
+  font-size: 24px;
 }
+
 /* Cards Section */
 #drinks {
   justify-content: flex-start;
@@ -201,8 +209,10 @@ nav .search-bar {
 .card-details h3 {
   margin: 10px;
   font-size: 30px;
+  font-family: 'Sedgwick Ave Display';
 }
 .card-details .main-details {
+  font-family: 'DynaPuff';
   font-size: 17px;
   margin: 10px;
   visibility: hidden;
@@ -211,10 +221,10 @@ nav .search-bar {
 .card:hover .card-details {
   height: 270px;
   bottom: 240px;
-  color: #220901;
+  color: #990000;
 }
 .card:hover .main-details {
   opacity: 1;
   visibility: visible;
-  background-color: #f3eee26e;
+  background-color: #f1e0b76e;
 }
