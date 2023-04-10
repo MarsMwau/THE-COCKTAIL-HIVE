@@ -148,22 +148,24 @@ nav .search-bar {
   align-items: center;
   padding: 0 4em 2em 4em;
 }
-.cocktail-cards {
-  display: inline-flex;
-  flex-direction: row;
 
+.cocktail-cards {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
   height: 500px;
-  width: 50%;
+  width: calc(33.33% - 20px);
   margin: 10px;
   box-shadow: 5px 5px 20px rgba(201, 201, 201, 0.397);
   color: white;
   background-color: #000000;
-  overflow: hidden;;
+  overflow: hidden;
+  position: relative;
  
 }
+
 .card:hover{
   cursor: pointer;
   box-shadow: 5px 5px 20px rgba(201, 201, 201, 0.397);
@@ -182,14 +184,15 @@ nav .search-bar {
 }
 
 .card-details {
- height: 20px;
+ height: 70px;
  width: 350px;
  padding: 4px;
  box-sizing: border-box;
  position: absolute;
- bottom: 50px;
+ bottom: 1px;
  color: brown;
  transition: .5s;
+ background-color: rgba(211, 209, 209, 0);
 }
 .card-details h3 {
   margin: 10px;
@@ -197,16 +200,17 @@ nav .search-bar {
 }
 .card-details .main-details {
   font-size: 17px;
-  margin: 20px;
+  margin: 10px;
   visibility: hidden;
   opacity: 0;
 }
 .card:hover .card-details {
-  height: 20px;
-  bottom: 40px;
-  color: #300236;
+  height: 270px;
+  bottom: 240px;
+  color: #ee9c04;
 }
 .card:hover .main-details {
   opacity: 1;
   visibility: visible;
+  background-color: #53525248;
 }
