@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=DM+Sans&family=Sedgwick+Ave+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=DynaPuff:wght@700&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&family=Volkhov:wght@700&display=swap');
 
 
 *,*::before,*::after {
@@ -212,7 +212,7 @@ nav .search-bar {
   font-family: 'Sedgwick Ave Display';
 }
 .card-details .main-details {
-  font-family: 'DynaPuff';
+  font-family: 'Volkhov';
   font-size: 17px;
   margin: 10px;
   visibility: hidden;
