@@ -6,13 +6,13 @@ searchForm.addEventListener('submit', async (e) => {
   e.preventDefault(); // prevent form from submitting
 
 const apiKey = `1`;
-const searchQuery = searchBar.value.toLowerCase(); // get the first letter of the search query
+const searchQuery = searchBar.value.toLowerCase(); // get the drinks of the search query
 const endpoint = `https://www.thecocktaildb.com/api/json/v1/${apiKey}/search.php?s=${searchQuery}`;
 
 fetch(endpoint)
   .then(response => response.json())
   .then(data => {
-      const cocktailDrinks = data.drinks.filter((drink) => drink.strAlcoholic === "Alcoholic"); // filter out drinks that are not classified as cocktails
+      const cocktailDrinks = data.drinks.filter((drink) => drink.strAlcoholic === "Alcoholic"); // filter out drinks that are not classified as alchoholic
   
       // Clear previous search results
       cocktailCards.innerHTML = '';
@@ -27,7 +27,7 @@ fetch(endpoint)
             <h3>${drink.strDrink}</h3>
             <div class="main-details">
             <h4>Ingredients:</h4>
-            <ul>strDrinkstrDrink
+            <ul>
               ${Object.entries(drink)
                 .filter(([key, value]) => key.startsWith('strIngredient') && value)
                 .map(([key, value]) => `<li>${value}</li>`)

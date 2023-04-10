@@ -38,7 +38,7 @@ ul {
 }
 
 .bg {
-  background-image: url(https://i.pinimg.com/564x/df/da/81/dfda81f9f57db11b1bab6e16bccae283.jpg );
+  background-image: url(https://i.pinimg.com/564x/03/bf/62/03bf62f77943e4b3f063a886c0e37966.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,14 +53,14 @@ ul {
 }
 
 .logo h1 {
-  color: white;
+  color: #BC3908;
 }
 
 .logo span {
-  color: pink;
+  color: #ECA400
 }
 .logo span:last-child {
-  color:rgba(255, 147, 255, 0.904);
+  color: #BC3908;
 }
 
 nav .search-bar {
@@ -82,23 +82,24 @@ nav .search-bar {
 }
 .search-bar input[type="text"] {
   padding: 0.5rem;
-  border-radius: 0.25rem 0 0 0.25rem;
+  border-radius: 1.25rem 0 0 1.25rem;
   border: none;
   font-size: 1rem;
   width: 300px;
+  transition: width 0.6s ease-in-out;
 }
 .search-bar button[type="search"] {
-  background-color: #300236;
+  background-color: #BC3908;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 0 0.25rem 0.25rem 0;
+  border-radius: 0 1.25rem 1.25rem 0;
   font-size: 1rem;
-  cursor: pointer;
+  cursor: progress;
   transition: background-color 0.2s ease-in-out;
 }
-.search-bar button[type="submit"]:hover {
-  background-color: #0b082c;
+.search-bar button[type="search"]:hover {
+  background-color: #4b1402;
 }
 
 
@@ -113,7 +114,7 @@ nav .search-bar {
 .hero h1 {
   font-family: 'Cabin Sketch', cursive;
   font-weight: 900;
-  color: #fff;
+  color: #BC3908;
   font-size: clamp(4rem, 5vw, 2rem);
   padding-bottom: 0.5em;
   white-space: nowrap;
@@ -147,6 +148,9 @@ nav .search-bar {
   justify-content: flex-start;
   align-items: center;
   padding: 0 4em 2em 4em;
+  background: url(https://i.pinimg.com/564x/03/bf/62/03bf62f77943e4b3f063a886c0e37966.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cocktail-cards {
@@ -174,7 +178,7 @@ nav .search-bar {
 
 .card img {
   height: 500px;
-  width: 350px;
+  width: auto;
   border-radius: 3px;
   transition: .5s;
 }
@@ -184,13 +188,13 @@ nav .search-bar {
 }
 
 .card-details {
- height: 70px;
+ height: 80px;
  width: 350px;
  padding: 4px;
  box-sizing: border-box;
  position: absolute;
  bottom: 1px;
- color: brown;
+ color: #D45113;
  transition: .5s;
  background-color: rgba(211, 209, 209, 0);
 }
@@ -207,10 +211,10 @@ nav .search-bar {
 .card:hover .card-details {
   height: 270px;
   bottom: 240px;
-  color: #ee9c04;
+  color: #220901;
 }
 .card:hover .main-details {
   opacity: 1;
   visibility: visible;
-  background-color: #53525248;
+  background-color: #f3eee26e;
 }
