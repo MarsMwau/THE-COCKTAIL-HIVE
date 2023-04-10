@@ -24,7 +24,8 @@ fetch(endpoint)
         card.innerHTML = `
           <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">strDrink
           <div class="card-details">
-            <h3>${drink.strDristrDrinknk}</h3>strDrink
+            <h3>${drink.strDrink}</h3>
+            <div class="main-details">
             <h4>Ingredients:</h4>
             <ul>strDrinkstrDrink
               ${Object.entries(drink)
@@ -37,6 +38,7 @@ fetch(endpoint)
             <ul>
             <li>${drink.strInstructions}</li>
             </ul>
+            </div>
           </div>
         `;
         cocktailCards.appendChild(card);

@@ -38,7 +38,7 @@ ul {
 }
 
 .bg {
-  background-image: url(https://i.pinimg.com/564x/68/8c/0e/688c0e52f05430a413fc57b162260c45.jpg );
+  background-image: url(https://i.pinimg.com/564x/df/da/81/dfda81f9f57db11b1bab6e16bccae283.jpg );
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,7 +63,7 @@ ul {
   color:rgba(255, 147, 255, 0.904);
 }
 
-nav ul {
+nav .search-bar {
   display: flex;
   align-items: center;
   gap: 3em;
@@ -71,7 +71,7 @@ nav ul {
   margin-right: 0;
 }
 
-nav ul li:last-child {
+nav .search-bar {
   margin-left: auto;
 }
 
@@ -156,17 +156,12 @@ nav ul li:last-child {
 
 .card {
   height: 500px;
-  width: 60%;
+  width: 50%;
   margin: 10px;
   box-shadow: 5px 5px 20px rgba(201, 201, 201, 0.397);
   color: white;
   background-color: #000000;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: auto;
-  overflow-wrap: initial;
-  position: relative;
-  box-sizing: border-box;
+  overflow: hidden;;
  
 }
 .card:hover{
@@ -179,45 +174,39 @@ nav ul li:last-child {
   height: 500px;
   width: 350px;
   border-radius: 3px;
+  transition: .5s;
 }
 
+.card:hover img {
+  transform: scale(1.1) rotate(-3deg);
+}
 
 .card-details {
-  color: #0e0e0e;
-  height: 70px;
-  background: #7a787850;
-  width: 350px;
-  padding: 6px;
-  box-sizing: border-box;
-  position: relative;
-  bottom: 60px;
-  transform: translate(-0%, -70%);
-  text-align: center;
-
-  opacity: 0;
-  transform: .5s;
+ height: 20px;
+ width: 350px;
+ padding: 4px;
+ box-sizing: border-box;
+ position: absolute;
+ bottom: 50px;
+ color: brown;
+ transition: .5s;
 }
 .card-details h3 {
   margin: 10px;
   font-size: 30px;
-  font-family: 'DM Sans','Times New Roman', Times, serif;
 }
-
-.card-details h4 {
-  margin-bottom: 0.1em;
-}
-
-.card-details h4 ul li{
-  font-size: 10px;
+.card-details .main-details {
+  font-size: 17px;
   margin: 20px;
+  visibility: hidden;
+  opacity: 0;
 }
-
-
 .card:hover .card-details {
-  background: black;
+  height: 20px;
+  bottom: 40px;
+  color: #300236;
+}
+.card:hover .main-details {
   opacity: 1;
-  height: 127%;
-  color: white;
-  box-sizing: border-box;
-  
+  visibility: visible;
 }
