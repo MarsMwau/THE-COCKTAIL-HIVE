@@ -117,9 +117,9 @@ nav .search-bar {
 }
 
 .hero h1 {
-  font-family: 'Sedgwick Ave Display', cursive;
+  font-family: 'Dancing script', cursive;
   font-weight: 900;
-  color: #BC3908;
+  color: #a30404;
   font-size: clamp(4rem, 5vw, 2rem);
   padding-bottom: 0.5em;
   white-space: nowrap;
@@ -140,7 +140,7 @@ nav .search-bar {
 }
 
 .hero .hcard p:hover {
-  box-shadow: 5px 0px 57px 1px #ECA400;
+  box-shadow: 5px 0px 57px 1px #ec7200;
   color: #d43013;
 }
 
@@ -202,7 +202,7 @@ nav .search-bar {
  box-sizing: border-box;
  position: absolute;
  bottom: 1px;
- color: #D45113;
+ color: #831304;
  transition: .5s;
  background-color: rgba(211, 209, 209, 0);
 }
