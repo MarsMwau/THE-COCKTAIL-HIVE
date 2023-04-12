@@ -44,7 +44,13 @@ searchForm.addEventListener('submit', async (e) => {
           `;
           cocktailCards.appendChild(card);
         });
-      } else {
+         // Scroll to the search results
+           window.scrollTo({
+           top: document.getElementById('drinks').offsetTop,
+              behavior: 'smooth'
+           });
+      } 
+      else {
         // Clear previous search results
         cocktailCards.innerHTML = '';
         // Show error message
