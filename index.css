@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=DM+Sans&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&family=Volkhov:wght@700&display=swap');
+
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.navigation {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+:is(h1, p, h3) {
+  margin: 0;
+}
+
+.bg {
+  background-image: url(https://i.pinimg.com/564x/03/bf/62/03bf62f77943e4b3f063a886c0e37966.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.logo {
+  font-family: 'Cabin sketch', cursive;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  margin-right: auto;
+}
+
+.logo h1 {
+  color: #BC3908;
+}
+
+.logo span {
+  color: #ECA400
+}
+.logo span:last-child {
+  color: #BC3908;
+}
+
+nav .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  font-size: 17px;
+  margin-right: 0;
+}
+
+nav .search-bar {
+  margin-left: auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 2em;
+}
+.search-bar input[type="text"] {
+  padding: 0.5rem;
+  border-radius: 1.25rem 0 0 1.25rem;
+  border: none;
+  font-size: 1rem;
+  width: 300px;
+  transition: width 0.6s ease-in-out;
+}
+.search-bar button[type="search"] {
+  background-color: #BC3908;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0 1.25rem 1.25rem 0;
+  font-size: 1rem;
+  cursor: progress;
+  transition: background-color 0.2s ease-in-out;
+}
+.search-bar button[type="search"]:hover {
+  background-color: #4b1402;
+}
+
+
+/* Hero Section */
+.hero {
+  max-width: 500px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 6em 4em;
+}
+
+.hero h1 {
+  font-family: 'Dancing script', cursive;
+  font-weight: 900;
+  color: #a30404;
+  font-size: clamp(4rem, 5vw, 2rem);
+  padding-bottom: 0.5em;
+  white-space: nowrap;
+}
+
+.hero .hcard p {
+  background: transparent;
+  border-radius: 25px;
+  box-shadow: 4px 0px 57px 1px #d43013;
+  max-width: 500px;
+  padding: 1.5em 2em 3em 2em;
+  cursor: context-menu;
+  margin: auto;
+  margin: 10px 30px 70px 110px;
+  color: #fff;
+  font-family: 'Caveat';
+  font-size: 17px;
+}
+
+.hero .hcard p:hover {
+  box-shadow: 5px 0px 57px 1px #ec7200;
+  color: #d43013;
+}
+
+.hero h3 {
+  color: rgb(235, 131, 12);
+  font-family: 'Dancing Script';
+  font-style: oblique;
+  font-size: 24px;
+}
+
+/* Cards Section */
+#drinks {
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 4em 2em 4em;
+  background: url(https://i.pinimg.com/564x/03/bf/62/03bf62f77943e4b3f063a886c0e37966.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cocktail-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  height: 500px;
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  box-shadow: 5px 5px 20px rgba(201, 201, 201, 0.397);
+  color: white;
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+.card:hover{
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(201, 201, 201, 0.397);
+  
+}
+
+.card img {
+  height: 500px;
+  width: auto;
+  border-radius: 3px;
+  transition: .5s;
+}
+
+.card:hover img {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.card-details {
+ height: 80px;
+ width: 350px;
+ padding: 4px;
+ box-sizing: border-box;
+ position: absolute;
+ bottom: 1px;
+ color: #831304;
+ transition: .5s;
+ background-color: rgba(211, 209, 209, 0);
+}
+.card-details h3 {
+  margin: 10px;
+  font-size: 30px;
+  font-family: 'Sedgwick Ave Display';
+}
+.card-details .main-details {
+  font-family: 'Volkhov';
+  font-size: 17px;
+  margin: 10px;
+  visibility: hidden;
+  opacity: 0;
+}
+.card:hover .card-details {
+  height: 270px;
+  bottom: 240px;
+  color: #990000;
+}
+.card:hover .main-details {
+  opacity: 1;
+  visibility: visible;
+  background-color: #f1e0b76e;
+}
