@@ -8,7 +8,7 @@ The Cocktail Hive is a web application that allows users to search for cocktails
 ![Screenshot from 2023-04-19 01-25-11](https://user-images.githubusercontent.com/115712038/232919908-2c864e2e-39d8-405e-8ea7-8ad7d36faafc.png)
 
 
-![Screenshot from 2023-04-19 01-25-11](https://user-images.githubusercontent.com/115712038/232920330-2330395a-aea2-47e5-acc4-277af0022b60.png)
+![Screenshot from 2023-04-19 01-33-10](https://user-images.githubusercontent.com/115712038/232920711-c986a7df-f805-43ba-8d5b-abf1853c22b3.png)
 
 
 ## Technologies Used
