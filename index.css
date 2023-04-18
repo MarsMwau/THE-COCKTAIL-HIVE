@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&family=Volkhov:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
 
 
 *,*::before,*::after {
@@ -43,29 +44,29 @@ ul {
 }
 
 .bg {
-  background-image: url(https://i.pinimg.com/564x/03/bf/62/03bf62f77943e4b3f063a886c0e37966.jpg);
+  background-image: url(https://i.pinimg.com/564x/8f/82/c0/8f82c05ecb9b76c4667ee46dbb810afe.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
 }
 
 .logo {
-  font-family: 'Cabin sketch', cursive;
-  font-weight: 700;
+  font-family: 'Rubik Wet Paint', cursive;
+  font-weight: 300;
   font-size: clamp(1.5rem, 2vw, 2rem);
   margin-right: auto;
 }
 
 .logo h1 {
-  color: #BC3908;
+  color: #a82605;
 }
 
 .logo span {
-  color: #ECA400
+  color: #e4e1e1
 }
 .logo span:last-child {
-  color: #BC3908;
+  color: #b42b21;
 }
 
 nav .search-bar {
@@ -94,7 +95,7 @@ nav .search-bar {
   transition: width 0.6s ease-in-out;
 }
 .search-bar button[type="search"] {
-  background-color: #BC3908;
+  background-color: #bc1408;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
@@ -117,46 +118,49 @@ nav .search-bar {
 }
 
 .hero h1 {
-  font-family: 'Sedgwick Ave Display', cursive;
+  font-family: 'Cabin sketch', cursive;
   font-weight: 900;
-  color: #a30404;
+  color: #000000;
   font-size: clamp(4rem, 5vw, 2rem);
   padding-bottom: 0.5em;
   white-space: nowrap;
 }
 
 .hero .hcard p {
-  background: transparent;
+  background: url(https://i.pinimg.com/564x/97/68/dd/9768dda3b1e474741266f631bda0afc3.jpg);
+  background-size: cover;
   border-radius: 25px;
-  box-shadow: 4px 0px 57px 1px #d43013;
+  box-shadow: 4px 0px 30px 1px #d4460d;
   max-width: 500px;
   padding: 1.5em 2em 3em 2em;
   cursor: context-menu;
   margin: auto;
   margin: 10px 30px 70px 110px;
-  color: #fff;
-  font-family: 'Caveat';
+  color: #ffffff;
+  font-family: 'Sedgwick Ave Display';
   font-size: 17px;
 }
 
 .hero .hcard p:hover {
-  box-shadow: 5px 0px 57px 1px #ec7200;
-  color: #d43013;
+  box-shadow: 5px 0px 37px 1px #ec7200;
+  color: #000000;
+  background: url(https://i.pinimg.com/564x/8f/82/c0/8f82c05ecb9b76c4667ee46dbb810afe.jpg);
+  background-size: cover;
 }
 
 .hero h3 {
-  color: rgb(235, 131, 12);
+  color: rgb(104, 0, 0);
   font-family: 'Dancing Script';
   font-style: oblique;
-  font-size: 24px;
+  font-size: 27px;
 }
 
 /* Cards Section */
 #drinks {
   justify-content: flex-start;
   align-items: center;
-  padding: 0 4em 2em 4em;
-  background: url(https://i.pinimg.com/564x/03/bf/62/03bf62f77943e4b3f063a886c0e37966.jpg);
+  padding: 2e 4em 4em 4em;
+  background: url(https://i.pinimg.com/564x/8f/82/c0/8f82c05ecb9b76c4667ee46dbb810afe.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -202,9 +206,9 @@ nav .search-bar {
  box-sizing: border-box;
  position: absolute;
  bottom: 1px;
- color: #831304;
+ color: #420f02;
  transition: .5s;
- background-color: rgba(211, 209, 209, 0);
+ background-color: rgba(211, 209, 209, 0.658);
 }
 .card-details h3 {
   margin: 10px;
@@ -221,7 +225,7 @@ nav .search-bar {
 .card:hover .card-details {
   height: 270px;
   bottom: 240px;
-  color: #990000;
+  color: #5c0303;
 }
 .card:hover .main-details {
   opacity: 1;

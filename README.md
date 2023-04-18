@@ -5,9 +5,10 @@
 The Cocktail Hive is a web application that allows users to search for cocktails and displays a list of similar cocktails along with their ingredients. The app fetches data from The Cocktail DB API, which contains information on a wide range of cocktails.
 
 ## Screenshots
-![Screenshot from 2023-04-10 22-31-59](https://user-images.githubusercontent.com/115712038/231470069-b79ff747-8f07-4e16-b88c-73aaa97fb8ca.png)
+![Screenshot from 2023-04-19 01-25-11](https://user-images.githubusercontent.com/115712038/232919908-2c864e2e-39d8-405e-8ea7-8ad7d36faafc.png)
 
-![Screenshot from 2023-04-12 16-25-06](https://user-images.githubusercontent.com/115712038/231471831-9f3136fd-781b-4555-9560-7b7225d2c509.png)
+
+![Screenshot from 2023-04-19 01-25-11](https://user-images.githubusercontent.com/115712038/232920054-12430e05-35e3-4b9f-a45e-a23658bf758c.png)
 
 
 ## Technologies Used
