@@ -1,50 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
     <title>THE COCKTAIL HIVE</title>
-</head>
-<body class="bg">
-  <section>
-    <header>
-      <!--Navigation-->
-      <div class="navigation">
-        <a href="#logo" class="logo">
-          <h1>THE <span>COCKTAIL</span>
-            <span> HIVE</span></h1>
-        </a>
-          <nav class="navbar">
-                <div class="search-bar">
-                  <form>
-                    <input type="text" id="search-bar" placeholder="Every Hour Is Happy Hour...">
-                    <button type="search">Find</button>
-                  </form>
-                </div>
-          </nav>
-      </div>
+  </head>
+  <body class="bg">
+    <section>
+      <header>
+        <!--Navigation-->
+        <div class="navigation">
+          <div class="logo">
+            <a href="#hero">
+              <h1><span>COCKTAIL</span> <span> HIVE</span></h1>
+            </a>
+          </div>
+          <div class="search-bar">
+            <form>
+              <input
+                type="text"
+                name="text"
+                id="search-bar"
+                placeholder="Every Hour Is Happy Hour..."
+              />
+              <button class="search__btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="22"
+                  height="22"
+                >
+                  <path
+                    d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+                    fill="#efeff1"
+                  ></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
       </header>
       <main>
-        <section id="logo">
+        <section id="hero">
           <div class="hero">
-            <h1>Welcome to The Cocktail Hive......</h1>
-            <div class="hcard">
-              <p>We help you search for your desired cocktails and find their ingredient,
-               so you can easily discover new cocktail recipes and learn how to make them at home.</p>
+            <div class="hero-text">
+              <h1>Dive into a world of refreshing and tantalizing cocktail recipes</h1>
+              <p>
+                Use our search bar to find any cocktail, and we'll provide you with detailed ingredients and step-by-step instructions. Get ready to impress your friends with your bartending skills!
+              </p>
+              <h3>Shake, Stir, Sip, and Savor</h3>
             </div>
-               <h3>It's a cocktail heaven in simple words!</h3>
+            <div class="hero-image">
+              <img src="https://images.pexels.com/photos/7259072/pexels-photo-7259072.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hero image" />
+            </div>
           </div>
         </section>
         <section id="drinks">
-          <div class="cocktail-cards">
-            
+          <div class="drinks">
+            <h2 class="search-results-heading">Your search results:</h2>
+            <div class="cocktail-cards"></div>
           </div>
         </section>
-       
+        
       </main>
-      </section>
+    </section>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>

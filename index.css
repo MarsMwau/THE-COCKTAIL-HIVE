@@ -5,7 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Caveat:wght@700&family=DM+Sans&family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&family=Volkhov:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 *,*::before,*::after {
   box-sizing: border-box;
@@ -13,13 +15,18 @@
 
 body {
   margin: 0;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
   background-color: black;
+  width: 100%;
+  color: white;
+  height: auto;
 }
 
 a {
   text-decoration: none;
+}
+
+:is(h1, p, h3) {
+  margin: 0;
 }
 
 ul {
@@ -27,170 +34,221 @@ ul {
   list-style: none;
 }
 
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: var(--nav);
+  box-sizing: border-box;
+  padding: 0;
+  position: relative;
+  top: 0;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
 .navigation {
-  max-width: 90%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.row {
-  display: flex;
-}
-
-:is(h1, p, h3) {
-  margin: 0;
-}
-
-.bg {
-  background-image: url(https://i.pinimg.com/564x/8f/82/c0/8f82c05ecb9b76c4667ee46dbb810afe.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 90vh;
+  width: 92vw;
+  height: 70px;
 }
 
 .logo {
-  font-family: 'Rubik Wet Paint', cursive;
-  font-weight: 300;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6em;
   margin-right: auto;
 }
 
 .logo h1 {
-  color: #a82605;
+  color: #ffffff;
 }
 
 .logo span {
-  color: #e4e1e1
-}
-.logo span:last-child {
-  color: #b42b21;
-}
-
-nav .search-bar {
-  display: flex;
-  align-items: center;
-  gap: 3em;
-  font-size: 17px;
-  margin-right: 0;
-}
-
-nav .search-bar {
-  margin-left: auto;
+  color: #b44621;
 }
 
 .search-bar {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 2em;
-}
-.search-bar input[type="text"] {
-  padding: 0.5rem;
-  border-radius: 1.25rem 0 0 1.25rem;
-  border: none;
-  font-size: 1rem;
-  width: 300px;
-  transition: width 0.6s ease-in-out;
-}
-.search-bar button[type="search"] {
-  background-color: #bc1408;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0 1.25rem 1.25rem 0;
-  font-size: 1rem;
-  cursor: progress;
-  transition: background-color 0.2s ease-in-out;
-}
-.search-bar button[type="search"]:hover {
-  background-color: #4b1402;
+  height: 55px;
 }
 
+form {
+display: flex;
+flex-direction: row;
+}
+
+input {
+  max-width: 390px;
+  width: 290px;
+  height: 45px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #201007;
+  caret-color: #f7f7f8;
+  color: #fff;
+  padding: 7px 10px;
+  border: 2px solid transparent;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-right: 1px;
+  transition: all .2s ease;
+}
+
+input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+input:focus {
+  border: 2px solid #b44621;
+  background-color: #0e0e10;
+}
+
+.search__btn {
+  border: none;
+  cursor: pointer;
+  background-color: #b44621;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 45px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__btn:hover {
+  background-color: rgba(54, 54, 56, 1);
+}
 
 /* Hero Section */
+
+#hero {
+  min-height: calc(100vh - 70px);
+  width: 100%;
+}
+
 .hero {
-  max-width: 500px;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 6em 4em;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  width: 92vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 4rem;
 }
 
-.hero h1 {
-  font-family: 'Cabin sketch', cursive;
-  font-weight: 900;
-  color: #000000;
-  font-size: clamp(4rem, 5vw, 2rem);
-  padding-bottom: 0.5em;
-  white-space: nowrap;
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top:5rem;
 }
 
-.hero .hcard p {
-  background: url(https://i.pinimg.com/564x/97/68/dd/9768dda3b1e474741266f631bda0afc3.jpg);
-  background-size: cover;
-  border-radius: 25px;
-  box-shadow: 4px 0px 30px 1px #d4460d;
-  max-width: 500px;
-  padding: 1.5em 2em 3em 2em;
-  cursor: context-menu;
-  margin: auto;
-  margin: 10px 30px 70px 110px;
+.hero-text h1 {
+  font-family: "Marck Script", cursive;;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffebe0;
+  font-size: 2em;
+  padding-bottom: 3rem;
+}
+
+.hero-text p {
   color: #ffffff;
-  font-family: 'Sedgwick Ave Display';
-  font-size: 17px;
-}
-
-.hero .hcard p:hover {
-  box-shadow: 5px 0px 37px 1px #ec7200;
-  color: #000000;
-  background: url(https://i.pinimg.com/564x/8f/82/c0/8f82c05ecb9b76c4667ee46dbb810afe.jpg);
-  background-size: cover;
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  padding-bottom: 4rem;
 }
 
 .hero h3 {
-  color: rgb(104, 0, 0);
-  font-family: 'Dancing Script';
-  font-style: oblique;
-  font-size: 27px;
+  color: #b44621;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.2em;
+  text-align: end;
+}
+
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24%;
 }
 
 /* Cards Section */
 #drinks {
-  justify-content: flex-start;
-  align-items: center;
-  padding: 2e 4em 4em 4em;
-  background: url(https://i.pinimg.com/564x/8f/82/c0/8f82c05ecb9b76c4667ee46dbb810afe.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.drinks {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 92vw;
+  position: relative;
+}
+
+.search-results-heading {
+  display: none;
+}
+
+.search-results-heading {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffebe0;
+  text-align: center;
+  font-size: 2em;
+  padding-bottom: 1rem;
 }
 
 .cocktail-cards {
   display: flex;
   flex-wrap: wrap;
+  gap: 1.2rem;
 }
 
 .card {
-  height: 500px;
-  width: calc(33.33% - 20px);
+  height: 400px;
+  width: calc(22.22% - 15px);
   margin: 10px;
-  box-shadow: 5px 5px 20px rgba(201, 201, 201, 0.397);
+  box-shadow: 5px 5px 20px rgba(255, 131, 73, 0.397);
   color: white;
   background-color: #000000;
   overflow: hidden;
   position: relative;
- 
 }
 
-.card:hover{
+.card:hover {
   cursor: pointer;
-  box-shadow: 5px 5px 20px rgba(201, 201, 201, 0.397);
-  
+  box-shadow: 5px 5px 20px rgba(113, 40, 0, 0.397);
 }
 
 .card img {
-  height: 500px;
-  width: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 3px;
   transition: .5s;
 }
@@ -200,35 +258,188 @@ nav .search-bar {
 }
 
 .card-details {
- height: 80px;
- width: 350px;
- padding: 4px;
- box-sizing: border-box;
- position: absolute;
- bottom: 1px;
- color: #420f02;
- transition: .5s;
- background-color: rgba(211, 209, 209, 0.658);
+  height: 80px;
+  width: auto;
+  padding: 4px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 1px;
+  color: #420f02;
+  transition: .5s;
+  background-color: rgba(211, 209, 209, 0.658);
 }
+
 .card-details h3 {
   margin: 10px;
-  font-size: 30px;
+  font-size: 1.7em;
   font-family: 'Sedgwick Ave Display';
 }
+
 .card-details .main-details {
   font-family: 'Volkhov';
-  font-size: 17px;
-  margin: 10px;
+  font-size: 1em;
+  margin: 5px;
   visibility: hidden;
   opacity: 0;
+  background-color: #c5afa7c9;
+  height: 340px;
+  overflow-y: auto;
 }
+
+.card-details .main-details::-webkit-scrollbar {
+  display: none;
+}
+
+.card-details .main-details {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .card:hover .card-details {
   height: 270px;
-  bottom: 240px;
-  color: #5c0303;
+  bottom: 140px;
+  color: #b44621;
 }
+
 .card:hover .main-details {
   opacity: 1;
   visibility: visible;
-  background-color: #f1e0b76e;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .card {
+    width: calc(30% - 15px);
+  }
+}
+
+@media (max-width: 992px) {
+
+  .logo {
+    font-size: 1.5em; 
+  }
+
+  input {
+    max-width: 250px;
+    width: 210px;
+  }
+
+  .cocktail-cards {
+    justify-content: center;
+  }
+  
+  .card {
+    width: calc(45% - 15px);
+  }
+  
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-text {
+    margin-top: 2rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+  
+  .hero-text p {
+    font-size: 1.2em;
+  }
+  
+  .hero h3 {
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  .hero-image img {
+    border-radius: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .logo {
+    font-size: 1.2em; 
+  }
+
+  input {
+    max-width: 200px;
+    width: 150px;
+  }
+
+  .search-results-heading {
+    font-size: 1.7em;
+  }
+
+  .cocktail-cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: calc(40% - 10px);
+  }
+  
+  .hero-text h1 {
+    font-size: 1.5em;
+  }
+  
+  .hero-text p {
+    font-size: 1em;
+  }
+  
+  .hero h3 {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .search-results-heading {
+    font-size: 1.5em;
+  }
+
+  .cocktail-cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: calc(90% - 20px);
+  }
+  
+  .hero {
+    padding-top: 4rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.3em;
+  }
+  
+  .hero-text p {
+    font-size: 0.9em;
+  }
+  
+  .hero h3 {
+    font-size: 0.8em;
+    text-align: end;
+  }
+  
+  .logo {
+    font-size: 0.7em; 
+  }
+
+  input {
+    max-width: 160px;
+    width: 130px;
+    height: 35px;
+  }
+
+  .search__btn {
+    height: 35px;
+    width: 30px;
+  }
+
 }
