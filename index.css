@@ -64,12 +64,13 @@ header {
   margin-right: auto;
 }
 
-.logo h1 {
-  color: #ffffff;
-}
 
 .logo span {
   color: #b44621;
+}
+
+.logo span:last-child {
+  color: #ffffff;
 }
 
 .search-bar {
